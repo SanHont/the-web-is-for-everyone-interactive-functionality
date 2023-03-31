@@ -1,0 +1,44 @@
+<%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/form.css">
+
+    <section class="add-new-player">
+        <form action="/new" method="post">
+            <fieldset>
+                <legend><span>1</span>Personal Information</legend>
+                    <div>
+                        <label for="playerId">Player Id:</label>
+                        <input required type="text" name="playerId" id="playerId" placeholder="..." value="" />
+                    </div>
+
+                    <div>
+                        <label for="name">Player name:</label>
+                        <input required type="text" name="name" id="name" placeholder="Name" value="" />
+                    </div>
+
+                    <div>
+                        <label for="jerseyNumber">Gender:</label>
+                        <select required name="gender" id="genders">
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="jerseyNumber">Jersey Number:</label>
+                        <input required type="text" name="jerseyNumber" id="jerseyNumber" placeholder="..." value="" />
+                    </div>
+            </fieldset>
+            <fieldset>
+                <legend><span>2</span>Player Questions</legend>
+                <% data2.questions.forEach(questions=> { %>
+                    <div>
+                    <label for="questions"> <%= questions.title %> </label>
+                    <input required type="text" name="questions" id="questions" placeholder="..." value="" />
+                </div>
+                    <% }) %>
+            </fieldset>
+            <button>Submit</button>
+        </form> 
+    </section>
+
+    <%- include('./partials/foot.ejs') %>

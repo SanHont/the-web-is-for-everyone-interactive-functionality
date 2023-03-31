@@ -1,0 +1,48 @@
+.add-new-player {
+    width: 70%;
+    color: var(--c-raisin-black);
+    background-color: var(--c-floral-white);
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+section {
+    display: flex;
+    margin: 1rem auto;
+}
+
+.add-new-player form {
+    margin: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+legend span {
+    padding-right: 0.5rem;
+}
+
+fieldset {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    display: inline-block;
+}
+div {
+    width: 50%;
+    padding: 0.5rem;
+    float: left;
+}
+
+button {
+    background-color: var(--c-atomic-tangerin);
+    border: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    color: var(--c-floral-white);
+    cursor: pointer;
+    transition: 300ms;
+}
+
+button:hover {
+    transform: scale(1.2);
+}

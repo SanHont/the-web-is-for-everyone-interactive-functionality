@@ -1,0 +1,66 @@
+<%- include('./partials/head.ejs') %>
+
+    <main>
+        <section class="live-score">
+            <div class="live-score-titles">
+                <h2 class="live-score-titles-h2">Netherlands VS England</h2>
+            </div>
+            <div class="flex-area-live-score">
+                <div class="home-team-live-score">
+                    <img class="vlag-team" src="assets/vlag-nederland.png">
+                    <h2>6 - 3</h2>
+                </div>
+                <div class="away-team-live-score">
+                    <h2></h2>
+                    <img class="vlag-team" src="assets/vlag-engeland.png">
+                </div>
+            </div>
+        </section>
+        <section class="score-list">
+            <div class="home-team-score-history">
+                <p>test</p>
+            </div>
+            <div class="score-history">
+                <p>1-0</p>
+                <p>2-0</p>
+                <p>3-0</p>
+                <p>4-0</p>
+                <p>4-1</p>
+                <p>4-2</p>
+                <p>4-3</p>
+                <p>4-4</p>
+            </div>
+            <div class="away-team-score-history">
+                <p>test</p>
+
+            </div>
+
+
+        </section>
+        <section class="player-list">
+            <section class="home-team">
+                <h2>HOME TEAM</h2>
+                <% data1.players.forEach(players=> { %>
+                    <p id="players">
+                        <%= players.name %>
+                            <span id="number">
+                                <%= players.jerseyNumber%>
+                            </span>
+                    </p>
+                    <% }) %>
+            </section>
+            <section class="away-team">
+                <h2>AWAY TEAM</h2>
+                <% data1.players.forEach(players=> { %>
+                    <p id="players">
+                        <%= players.name %>
+                            <span id="number">
+                                <%= players.jerseyNumber%>
+                            </span>
+                    </p>
+                    <% }) %>
+            </section>
+        </section>
+    </main>
+
+    <%- include('./partials/foot.ejs') %>

@@ -1,0 +1,220 @@
+/*--------------------------------------------------------------
+# VARIABLES
+--------------------------------------------------------------*/
+
+:root {
+  --c-delft-blue: #3A3C63;
+  --c-floral-white: #F9F4EA;
+  --c-atomic-tangerin: #F19460;
+  --c-keppel: #51B599;
+  --c-iris: #6E46CC;
+  --c-raisin-black: #1E1D22;
+}
+
+/*--------------------------------------------------------------
+  # FONTS
+  --------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Inter-Light';
+  src: url(../fonts/Inter-Light.ttf);
+}
+
+/*--------------------------------------------------------------
+  # GLOBALS
+  --------------------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--c-delft-blue);
+  color: var(--c-floral-white);
+  font-family: 'Inter-Light';
+}
+
+/*--------------------------------------------------------------
+  # HEADER
+  --------------------------------------------------------------*/
+
+header {
+  background-color: var(--c-raisin-black);
+  padding: 0rem 2rem;
+}
+
+header img {
+  width: 6%;
+  height: auto;
+}
+
+/*--------------------------------------------------------------
+  # MAIN
+  --------------------------------------------------------------*/
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "live-score player-list"
+    "score-list player-list";
+}
+
+/*--------------------------------------------------------------
+  # LIVE SCORE
+  --------------------------------------------------------------*/
+
+.live-score {
+  grid-area: live-score;
+}
+
+/*--------------------------------------------------------------
+  # SCORE LIST
+  --------------------------------------------------------------*/
+
+.score-list {
+  grid-area: score-list;
+}
+
+/*--------------------------------------------------------------
+  # PLAYER-LIST
+  --------------------------------------------------------------*/
+
+.player-list {
+  color: #1E1D22;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  grid-area: player-list;
+  background-color: #F9F4EA;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.player-list h2 {
+  padding-bottom: 1rem;
+  font-weight: bolder;
+  font-family: 'Montserrat-Bold';
+}
+
+.player-list p span {
+  margin-left: 1rem;
+  padding: 0 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #1E1D22;
+  color: #F9F4EA;
+}
+
+.vlag-team {
+  width: 6rem;
+  border-radius: 50%;
+  height: 6rem;
+  object-fit: cover;
+}
+
+.live-score {
+  color: var(--c-raisin-black);
+  background-color: var(--c-floral-white);
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 2rem;
+}
+
+.live-score img {
+  border: 4px var(--c-raisin-black) solid;
+}
+
+.home-team-live-score {
+  display: flex;
+  align-items: center;
+}
+
+.away-team-live-score {
+  display: flex;
+  align-items: center;
+}
+
+.away-team-live-score h2 {
+  padding-right: 3rem;
+}
+
+.home-team-live-score h2 {
+  padding-left: 3rem;
+}
+
+.live-score-titles-h2 {
+  font-size: 2rem;
+  font-family: 'Montserrat-Bold';
+  font-weight: bolder;
+  display: flex;
+}
+
+.flex-area-live-score {
+  display: flex;
+  justify-content: center;
+}
+
+.live-score-titles {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+#players {
+  border-bottom: 1px #1E1D22 solid;
+  padding: 0.1rem;
+}
+
+.home-team {
+  padding-left: 2rem;
+}
+
+.away-team {
+  padding-right: 2rem;
+}
+
+.score-list {
+  color: var(--c-raisin-black);
+  background-color: var(--c-floral-white);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-left: 2rem;
+  display: flex;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  justify-content: center;
+}
+
+.score-list p{
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.home-team-score-history {
+  display: flex;
+}
+
+.away-team-score-history {
+  display: flex;
+}
