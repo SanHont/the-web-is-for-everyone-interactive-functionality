@@ -1,7 +1,5 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
-
 # Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+Commentary tool voor UltiTV
 
 ## Inhoudsopgave
 
@@ -13,9 +11,11 @@
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- In de Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
+Voor UltiTv was de opdracht om een website te maken waarbij je scores kunt zien en doorgeven van de wedstrijd die bezig is. Ook moesten we een optie maken om bijvoorbeeld een speler toe te kunnen voegen. Dit is gedaan op een andere pagina, en de rest staat gewoon op de main page.
+
 <!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+
+🌐 https://fine-belt-ant.cyclic.app/
 
 ## Gebruik
 <!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
