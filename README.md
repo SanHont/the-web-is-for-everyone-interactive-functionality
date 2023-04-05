@@ -20,14 +20,13 @@ Voor UltiTv was de opdracht om een website te maken waarbij je scores kunt zien 
 🌐 https://fine-belt-ant.cyclic.app/
 
 ## Gebruik
-<!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
+De website is te gebruiken door gewoon te kijken naar de website, als het nodig is kan je ook een speler toevoegen. Dit doe je door op de oranje knop met "Add Player" te klikken. Deze stuurt je dan door naar een andere pagina waar je vervolgens de informatie kunt toevoegen van die speler. Als dit gedaan is dan kun je vervolgens op de "Submit" button. Hierdoor maak je een nieuwe speler aan en die wordt dan weer op de home page weergegeven.
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+De website is opgebouwd met EJS CSS en Node, ik heb voor gebruik gemaakt van grid en flex box voor de indeling. Ik maak met een forEach loop een lijst van alle spelers. Ik heb met css vooral de styling gemaakt van de sections en nog niet heel erg in detail door gegaan. In de form heb ik twee fieldsets gemaakt, waarvan 1 voor de speler informatie en 1 voor de vragen. En ik heb nog niks met JavaScript gedaan, wel met node, maar daarvoor alleen de standaard benodigheden om de website te kunnen laten draaien.
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
-
 
 ## Bronnen
 
