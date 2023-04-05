@@ -26,10 +26,11 @@ De website is te gebruiken door gewoon te kijken naar de website, als het nodig 
 De website is opgebouwd met EJS CSS en Node, ik heb voor gebruik gemaakt van grid en flex box voor de indeling. Ik maak met een forEach loop een lijst van alle spelers. Ik heb met css vooral de styling gemaakt van de sections en nog niet heel erg in detail door gegaan. In de form heb ik twee fieldsets gemaakt, waarvan 1 voor de speler informatie en 1 voor de vragen. En ik heb nog niks met JavaScript gedaan, wel met node, maar daarvoor alleen de standaard benodigheden om de website te kunnen laten draaien.
 
 ## Installatie
-<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+Om met mijn project verder te gaan, kun je de repository forken door ergens rechtsboven op fork te klikken. Dan fork je de repo en daarna open je het in GitHub Desktop, vanaf dit moment kun je er aan verder werken en dan kan je ook pushen zodat de updates ook op GitHub verschijnen.
+
+Ook moet je nog de Node packeges instaleren, dit kan je doen door in de terminal npm install te typen. Zorg er wel voor dat je vervolgens in een .gitignore de node_modules verbergt. Anders wordt alles mee geupload naar GitHub.
 
 ## Bronnen
 
 ## Licentie
-
 This project is licensed under the terms of the [MIT license](./LICENSE).
