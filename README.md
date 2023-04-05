@@ -13,7 +13,9 @@ Commentary tool voor UltiTV
 ## Beschrijving
 Voor UltiTv was de opdracht om een website te maken waarbij je scores kunt zien en doorgeven van de wedstrijd die bezig is. Ook moesten we een optie maken om bijvoorbeeld een speler toe te kunnen voegen. Dit is gedaan op een andere pagina, en de rest staat gewoon op de main page.
 
-<!-- Voeg een mooie poster visual toe 📸 -->
+📸 
+
+<img src="https://user-images.githubusercontent.com/112860052/230037794-2f1909a8-6068-4e2e-b384-20f2c3ced543.png" width="45%"> <img src="https://user-images.githubusercontent.com/112860052/230037701-d94397c7-2b25-442a-a2cb-fa755edc4740.png" width="45%">
 
 🌐 https://fine-belt-ant.cyclic.app/
 
