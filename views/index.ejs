@@ -28,7 +28,8 @@
                 <p>4-1</p>
                 <p>4-2</p>
                 <p>4-3</p>
-                <p>4-4</p>
+                <p>5-3</p>
+                <p>6-3</p>
             </div>
             <div class="away-team-score-history">
                 <p>test</p>
@@ -38,9 +39,10 @@
 
         </section>
         <section class="player-list">
+            <section class="player-list-area">
             <section class="home-team">
                 <h2>HOME TEAM</h2>
-                <% data1.players.forEach(players=> { %>
+                <% data4.players.forEach(players=> { %>
                     <p id="players">
                         <%= players.name %>
                             <span id="number">
@@ -51,7 +53,7 @@
             </section>
             <section class="away-team">
                 <h2>AWAY TEAM</h2>
-                <% data1.players.forEach(players=> { %>
+                <% data4.players.forEach(players=> { %>
                     <p id="players">
                         <%= players.name %>
                             <span id="number">
@@ -60,6 +62,8 @@
                     </p>
                     <% }) %>
             </section>
+            </section>
+            <a class="add-player-ahref" href="newPlayer">Add Player</a>
         </section>
     </main>
 

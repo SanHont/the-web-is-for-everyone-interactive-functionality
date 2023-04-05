@@ -2,43 +2,49 @@
     <link rel="stylesheet" href="/form.css">
 
     <section class="add-new-player">
-        <form action="/new" method="post">
-            <fieldset>
-                <legend><span>1</span>Personal Information</legend>
+        <form id="post" action="/form" method="post" name="newPlayer">
+                <fieldset>
+                    <legend><span>1</span>Personal Information</legend>
                     <div>
-                        <label for="playerId">Player Id:</label>
-                        <input required type="text" name="playerId" id="playerId" placeholder="..." value="" />
+                        <label for="name">Name</label>
+                        <input type="text" name="name" placeholder="..." value="<%= locals.values?.name ?? '' %>" />
                     </div>
 
                     <div>
-                        <label for="name">Player name:</label>
-                        <input required type="text" name="name" id="name" placeholder="Name" value="" />
+                        <label for="name">Gender</label>
+                        <input type="text" name="gender" placeholder="..." />
                     </div>
 
                     <div>
-                        <label for="jerseyNumber">Gender:</label>
-                        <select required name="gender" id="genders">
-                            <option value="M">Male</option>
-                            <option value="F">Female</option>
+                        <label for="name">Jersey Number</label>
+                        <input type="number" min="1" max="100" name="jerseyNumber" placeholder="..." />
+                    </div>
+
+                    <div>
+                        <label for="name">Team</label>
+                        <input type="text" name="team" placeholder="..." />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend><span>2</span>Player Questions</legend>
+                    <label>
+                        Questions
+                        <select name="question">
+                            <option disabled selected>--- Select ---</option>
+                            <% data5.questions.forEach(answer=> { %>
+                                <option value="<%= answer.id %>">
+                                    <%= answer.title %>
+                                </option>
+                                <% }) %>
                         </select>
-                    </div>
-
-                    <div>
-                        <label for="jerseyNumber">Jersey Number:</label>
-                        <input required type="text" name="jerseyNumber" id="jerseyNumber" placeholder="..." value="" />
-                    </div>
-            </fieldset>
-            <fieldset>
-                <legend><span>2</span>Player Questions</legend>
-                <% data2.questions.forEach(questions=> { %>
-                    <div>
-                    <label for="questions"> <%= questions.title %> </label>
-                    <input required type="text" name="questions" id="questions" placeholder="..." value="" />
-                </div>
-                    <% }) %>
-            </fieldset>
-            <button>Submit</button>
-        </form> 
+                    </label>
+                    <label>
+                        Answer
+                        <input type="text" name="content" value="<%= locals.values?.content ?? ''%>" />
+                    </label>
+                </fieldset>
+            <button id="submit" type="submit" value="Submit">Submit</button>
+        </form>
     </section>
 
     <%- include('./partials/foot.ejs') %>

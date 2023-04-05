@@ -7,15 +7,17 @@ const server = express()
 // Haalt de API op
 const url = ["https://api.ultitv.fdnd.nl/api/v1"];
 
-const postUrl = "https://api.ultitv.fdnd.nl/api/v1/players";
+const postUrl = "https://api.ultitv.fdnd.nl/api/v1/players?first=15";
 const apiUrl = "https://api.ultitv.fdnd.nl/api/v1/questions";
 
 const questiondata = await fetchJson(apiUrl);
 
 const urls = [
-  [url] + "/players",
-  [url] + "/questions",
+  [url] + "/game/943.json",
+  [url] + "/game/943/statistics.json",
   [url] + "/facts/Player/8607.json",
+  [postUrl],
+  [apiUrl],
 ];
 
 //public map gebruiken
@@ -31,34 +33,27 @@ server.use(express.urlencoded({ extended: true }))
 
 //hier komen de routes
 server.get("/", async function (request, response) {
-  const [data1, data2, data3] = await Promise.all(urls.map(fetchJson));
-  const data = { data1, data2, data3 };
+  const [data1, data2, data3, data4, data5] = await Promise.all(urls.map(fetchJson));
+  const data = { data1, data2, data3, data4, data5 };
   response.render("index", data);
 });
 
-server.get('/new', async (request, response) => {
-  const [data1, data2, data3] = await Promise.all(urls.map(fetchJson));
-  const data = { data1, data2, data3 };
-  response.render('form', data)
-})
+server.get("/newPlayer", async function (request, response) {
+  const [data1, data2, data3, data4, data5] = await Promise.all(urls.map(fetchJson));
+  const data = { data1, data2, data3, data4, data5 };
+  response.render("form", data);
+});
 
-server.post("/new", (request, response) => {
+server.post("/form", (request, response) => {
   request.body.answers = [
     {
       content: request.body.content,
       questionId: request.body.question,
     },
   ];
-
   postJson(postUrl, request.body).then((data) => {
-    let newPlayer = { ...request.body };
-    console.log(request.body)
-
     if (data.success) {
       response.redirect("/?memberPosted=true");
-    } else {
-      const errormessage = `${data.message}: Mogelijk komt dit door de slug die al bestaat.`;
-      const newplayer = { error: errormessage, values: newPlayer };
     }
     response.redirect("/");
   });
@@ -69,7 +64,17 @@ server.set('port', 4000)
 
 //start de server
 server.listen(server.get('port'), () => {
-  console.log(`Application started on http://localhost:${server.get('port')}`)
+  console.log(`
+
+  ░██████╗███████╗██████╗░██╗░░░██╗███████╗██████╗░  ██████╗░███████╗░█████╗░██████╗░██╗░░░██╗
+  ██╔════╝██╔════╝██╔══██╗██║░░░██║██╔════╝██╔══██╗  ██╔══██╗██╔════╝██╔══██╗██╔══██╗╚██╗░██╔╝
+  ╚█████╗░█████╗░░██████╔╝╚██╗░██╔╝█████╗░░██████╔╝  ██████╔╝█████╗░░███████║██║░░██║░╚████╔╝░
+  ░╚═══██╗██╔══╝░░██╔══██╗░╚████╔╝░██╔══╝░░██╔══██╗  ██╔══██╗██╔══╝░░██╔══██║██║░░██║░░╚██╔╝░░
+  ██████╔╝███████╗██║░░██║░░╚██╔╝░░███████╗██║░░██║  ██║░░██║███████╗██║░░██║██████╔╝░░░██║░░░
+  ╚═════╝░╚══════╝╚═╝░░╚═╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝  ╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░
+
+  Application available on: http://localhost:${server.get('port')}
+  `);
 })
 
 /**

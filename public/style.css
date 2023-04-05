@@ -70,7 +70,7 @@ header img {
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto 1fr;
   gap: 0px 0px;
   grid-template-areas:
     "live-score player-list"
@@ -83,6 +83,7 @@ main {
 
 .live-score {
   grid-area: live-score;
+  height: max-content;
 }
 
 /*--------------------------------------------------------------
@@ -96,28 +97,55 @@ main {
 /*--------------------------------------------------------------
   # PLAYER-LIST
   --------------------------------------------------------------*/
-
 .player-list {
-  color: #1E1D22;
-  display: flex;
-  justify-content: space-between;
   padding: 3rem;
   grid-area: player-list;
   background-color: #F9F4EA;
   margin: 2rem;
   border-radius: 0.5rem;
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
   line-height: 1.6;
   font-size: 1.1rem;
 }
 
-.player-list h2 {
+.add-player-ahref {
+  background-color: var(--c-atomic-tangerin);
+  width: max-content;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--c-floral-white);
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.add-player-ahref:hover {
+  transform: scale(1.2);
+}
+
+.player-list-area {
+  color: #1E1D22;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  background-color: #F9F4EA;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.player-list-area h2 {
   padding-bottom: 1rem;
   font-weight: bolder;
   font-family: 'Montserrat-Bold';
 }
 
-.player-list p span {
+.player-list-area p span {
   margin-left: 1rem;
   padding: 0 0.5rem;
   border-radius: 0.2rem;
